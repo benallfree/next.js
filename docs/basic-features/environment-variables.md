@@ -60,6 +60,8 @@ Next.js allows you to expose variables using an environment variables file (`.en
 
 > **Note**: `.env` files **should be** included in your repository, and **`.env*.local` should be in `.gitignore`**, as those files are intended to be ignored. Consider `.local` files as a good place for secrets, and non-local files as a good place for defaults.
 
+> **Note**: To enable automatic `.env` loading, make sure `dotenv` is **not** in your `package.json`. If `dotenv` is in your `pakcage.json`, Next.js will assume you are handling environment variable loading yourself.
+
 The supported environments are `development`, `production` and `test`. The environment is selected in the following way:
 
 - [`next dev`](/docs/api-reference/cli#development) uses `development`
